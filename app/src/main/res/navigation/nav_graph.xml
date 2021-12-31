@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/shoppingFragment">
+
+
+    <fragment
+        android:id="@+id/shoppingFragment"
+        android:name="com.example.movieshoppingtesting.ui.ShoppingFragment"
+        android:label="ShoppingFragment" >
+        <action
+            android:id="@+id/action_shoppingFragment_to_addShoppingMovieItemFragment"
+            app:destination="@id/addShoppingMovieItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addShoppingMovieItemFragment"
+        android:name="com.example.movieshoppingtesting.ui.AddShoppingMovieItemFragment"
+        android:label="fragment_add_shopping_movie_item"
+        tools:layout="@layout/fragment_add_shopping_movie_item" >
+        <action
+            android:id="@+id/action_addShoppingMovieItemFragment_to_moviePickFragment"
+            app:destination="@id/moviePickFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviePickFragment"
+        android:name="com.example.movieshoppingtesting.ui.MoviePickFragment"
+        android:label="MoviePickFragment" />
+</navigation>
